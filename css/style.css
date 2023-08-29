@@ -9,29 +9,95 @@
     text-decoration: none;
     color: black;
     font-family: 'Inconsolata', monospace;
+
 }
 
 body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Establece el mínimo al 100% del viewport height */
+    display: flex;
+    flex-direction: column;
     background: linear-gradient(rgb(255, 255, 255), rgb(126, 125, 125));
 }
 
-/* Estilos para la barra de navegación */
-nav {
+header {
     display: flex;
     align-items: center;
-    padding: 70px 30px;
-    height: 90px;
     justify-content: space-between;
-    font-size: 1.1rem;
+    padding: 2rem;
+    margin-top: -60px;
 }
 
-/* Estilos para la lista de navegación */
-nav ul {
+/* Estilos para la barra de navegación */
+.nav {}
+
+.navList {
     display: flex;
+    gap: 1rem;
 }
 
-nav ul li {
-    margin-right: 20px;
+.navList li a {
+    color: #000000;
+}
+
+
+.abrirMenu,
+.cerrarMenu {
+    display: none;
+}
+
+@media screen and (max-width: 550px) {
+
+    .abrirMenu,
+    .cerrarMenu {
+        display: block;
+        border: 0;
+        font-size: 2rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .abrirMenu i {
+        color: #000000;
+    }
+
+    .cerrarMenu i {
+        color: white;
+    }
+
+
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: #131313;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgb(0, 0, 0, 0.5);
+    }
+
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .navList {
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .navList li a {
+        color: white;
+
+    }
 }
 
 /* Estilos para el logotipo */
@@ -121,11 +187,8 @@ footer ul li {
 
 .seeMore svg {
     width: 24px;
-    /* Ajusta el tamaño del icono según tus preferencias */
     height: 24px;
-    /* Ajusta el tamaño del icono según tus preferencias */
     margin-left: 10px;
-    /* Espacio entre el texto y el icono */
 }
 
 /* Animacion texto */
@@ -141,5 +204,51 @@ footer ul li {
 
     100% {
         transform: translate(0);
+    }
+}
+
+@media screen and (max-width: 558px){
+    .encabezado {
+        width: 100%;
+        margin-left: 0px;
+        padding: 30px 10px;
+    }
+
+    .encabezado h1 {
+        white-space: normal;
+        text-align: center;
+        font-size: 26px;
+    }
+
+    .encabezado p {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .seeMore {
+        font-size: 18px;
+        padding: 8px 16px;
+    }
+}
+
+@media screen and (max-width: 667px){
+    .encabezado {
+        width: 100%;
+        margin-left: 0px;
+        padding: 30px 10px;
+    }
+
+    .encabezado h1 {
+        font-size: 26px;
+    }
+
+    .encabezado p {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .seeMore {
+        font-size: 18px;
+        padding: 8px 16px;
     }
 }
