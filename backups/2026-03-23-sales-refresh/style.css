@@ -26,7 +26,6 @@ html {
 body {
     min-height: 100vh;
     color: var(--text);
-    overflow-x: clip;
     background:
         radial-gradient(circle at 10% 10%, rgba(95, 91, 85, 0.12), transparent 26%),
         radial-gradient(circle at 88% 12%, rgba(255, 255, 255, 0.66), transparent 22%),
@@ -34,10 +33,6 @@ body {
 }
 
 body.modal-open {
-    overflow: hidden;
-}
-
-body.menu-open {
     overflow: hidden;
 }
 
@@ -402,12 +397,6 @@ textarea {
 .sectionBlock>* {
     position: relative;
     z-index: 1;
-}
-
-.focusCard p,
-.timelineCard p {
-    color: var(--muted);
-    line-height: 1.6;
 }
 
 .sectionHeading {
@@ -868,9 +857,8 @@ textarea {
 
 .editorialPage .projectsGrid.refinedGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.2rem;
-    max-width: 1180px;
-    margin: 1.2rem auto 0;
+    gap: 1rem;
+    margin-top: 1.2rem;
 }
 
 .editorialPage .projectCard {
@@ -886,19 +874,6 @@ textarea {
     overflow: hidden;
 }
 
-.editorialPage .projectBody {
-    padding: 1.15rem 1.15rem 1.25rem;
-    min-height: 0;
-}
-
-.editorialPage .projectCard h2 {
-    font-size: clamp(1.35rem, 2.4vw, 1.75rem);
-}
-
-.editorialPage .projectExcerpt {
-    max-width: 62ch;
-}
-
 .editorialPage .projectCard:hover {
     transform: translateY(-6px);
     background: var(--panel-strong);
@@ -909,8 +884,8 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 300px;
-    padding: 1.15rem;
+    min-height: 250px;
+    padding: 1rem;
     border-bottom: 1px solid var(--border);
     border-radius: 0;
     overflow: hidden;
@@ -919,7 +894,7 @@ textarea {
 
 .editorialPage .projectMedia img {
     width: 100%;
-    height: 280px;
+    height: 230px;
     object-fit: contain;
     object-position: center;
 }
@@ -1178,7 +1153,6 @@ textarea {
 .captchaWrap {
     width: min(100%, 360px);
     margin: 0.65rem auto 0;
-    overflow: hidden;
 }
 
 .captchaNote {
@@ -1303,7 +1277,8 @@ textarea {
     width: min(1480px, calc(100% - 3rem));
     margin: 0 auto;
     flex: 1;
-    display: block;
+    display: flex;
+    align-items: center;
 }
 
 .subPage main {
@@ -1318,12 +1293,6 @@ textarea {
     padding: 2rem 0 4rem;
 }
 
-.homePage .encabezado {
-    min-height: auto;
-    padding-top: clamp(3rem, 10vh, 6.5rem);
-    padding-bottom: 3.2rem;
-}
-
 .homeKicker {
     margin-bottom: 1rem;
     color: var(--accent);
@@ -1333,19 +1302,16 @@ textarea {
 }
 
 .encabezado h1 {
-    width: 100%;
     max-width: none;
-    font-size: clamp(2.15rem, 3.6vw, 3.45rem);
-    line-height: 0.96;
+    font-size: clamp(2.85rem, 6.3vw, 5.9rem);
+    line-height: 0.92;
     letter-spacing: -0.05em;
     min-height: 1.2em;
     white-space: nowrap;
-    overflow: hidden;
 }
 
 .homeTitle [data-home-title-text] {
     display: inline;
-    max-width: 100%;
 }
 
 .typingCaret {
@@ -1378,37 +1344,6 @@ textarea {
     line-height: 1.7;
 }
 
-.homeEyebrow {
-    margin-bottom: 1rem;
-}
-
-.homeLead {
-    max-width: 62ch;
-    margin-top: 1.4rem;
-    color: var(--muted);
-    font-size: 1.24rem;
-    line-height: 1.7;
-}
-
-.homeActionRow {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 1.4rem;
-    margin-top: 2rem;
-}
-
-.homeTextLink {
-    width: fit-content;
-    display: inline-flex;
-    align-items: center;
-    font-size: 1rem;
-    color: var(--accent);
-    border-bottom: 1px solid rgba(17, 17, 17, 0.18);
-    padding-bottom: 0.18rem;
-    transition: transform 0.25s ease, border-color 0.25s ease;
-}
-
 .seeMore {
     width: fit-content;
     display: inline-flex;
@@ -1419,10 +1354,6 @@ textarea {
     border-bottom: 1px solid rgba(17, 17, 17, 0.22);
 }
 
-.homeActionRow .seeMore {
-    margin-top: 0;
-}
-
 .seeMore a {
     font-size: 1.02rem;
 }
@@ -1431,8 +1362,7 @@ textarea {
     transition: transform 0.25s ease;
 }
 
-.seeMore:hover svg,
-.homeTextLink:hover {
+.seeMore:hover svg {
     transform: translateX(4px);
 }
 
@@ -1448,169 +1378,6 @@ textarea {
     border: 1px solid var(--border);
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.36);
-}
-
-.homeWhatSection {
-    width: 100%;
-    max-width: 1180px;
-    margin: 0 auto;
-    padding-top: 2rem;
-    padding-bottom: 2.4rem;
-}
-
-.homeWhatSection h2 {
-    margin-top: 0.7rem;
-    max-width: 34ch;
-    font-size: clamp(1.55rem, 3.2vw, 2.4rem);
-    line-height: 1.08;
-}
-
-.homeWhatIntro {
-    max-width: 70ch;
-    margin-top: 1rem;
-    color: var(--muted);
-    line-height: 1.7;
-}
-
-.homeWhatList {
-    display: grid;
-    gap: 0.9rem;
-    margin-top: 1.25rem;
-}
-
-.homeWhatList li {
-    padding-top: 0.9rem;
-    border-top: 1px solid rgba(17, 17, 17, 0.1);
-    color: var(--muted);
-    line-height: 1.65;
-}
-
-.homeStackSection {
-    width: 100%;
-    max-width: 1180px;
-    margin: 0 auto;
-    padding-top: 2rem;
-    padding-bottom: 2.4rem;
-}
-
-.homeStackSection h2 {
-    margin-top: 0.7rem;
-    max-width: 26ch;
-    font-size: clamp(1.55rem, 3.2vw, 2.4rem);
-    line-height: 1.08;
-}
-
-.stackGrid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 1.4rem;
-}
-
-.stackItem {
-    position: relative;
-    width: 72px;
-    height: 72px;
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.42);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease;
-}
-
-.stackItem:hover {
-    transform: translateY(-2px);
-    border-color: rgba(17, 17, 17, 0.2);
-    background: rgba(255, 255, 255, 0.62);
-}
-
-.stackLogo {
-    font-size: 0.92rem;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    color: var(--text);
-}
-
-.stackTooltip {
-    position: absolute;
-    left: 50%;
-    bottom: calc(100% + 10px);
-    transform: translateX(-50%) translateY(6px);
-    padding: 0.5rem 0.65rem;
-    border-radius: 12px;
-    border: 1px solid rgba(17, 17, 17, 0.12);
-    background: rgba(255, 255, 255, 0.9);
-    box-shadow: var(--shadow);
-    color: var(--text);
-    font-size: 0.86rem;
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
-}
-
-.stackItem:hover .stackTooltip {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(-50%) translateY(0);
-}
-
-.homeMetricList {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.45rem;
-    margin-top: 2rem;
-    max-width: 780px;
-}
-
-.homeMetricList p {
-    margin: 0;
-    color: var(--muted);
-    line-height: 1.55;
-}
-
-.homeMetricList strong {
-    color: var(--text);
-}
-
-.homeInfoGrid {
-    width: 100%;
-    margin: 0;
-    padding: 0 0 3rem;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-}
-
-.homeInfoColumn h2 {
-    margin-top: 0.9rem;
-    max-width: 14ch;
-    font-size: clamp(1.85rem, 4vw, 3.3rem);
-    line-height: 1.02;
-}
-
-.homePlainList {
-    margin-top: 1.4rem;
-    display: grid;
-    gap: 1rem;
-}
-
-.homePlainList li {
-    color: var(--muted);
-    line-height: 1.62;
-}
-
-.homePlainList strong {
-    display: block;
-    margin-bottom: 0.18rem;
-    color: var(--text);
-}
-
-.homePlainList span {
-    display: block;
 }
 
 .homePage footer {
@@ -1711,13 +1478,11 @@ textarea {
 
 .projectModalMedia {
     min-height: 0;
-    overflow-y: auto;
-    overflow-x: hidden;
+    overflow: hidden;
     background: #f3f1ec;
     border-left: 1px solid rgba(255, 255, 255, 0.06);
     display: grid;
-    grid-template-rows: auto auto;
-    align-content: start;
+    grid-template-rows: minmax(0, 1fr) auto;
 }
 
 .projectModalMediaStage {
@@ -1726,7 +1491,6 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: min(72vh, 860px);
     padding: 1rem 1rem 0.6rem;
 }
 
@@ -1769,10 +1533,6 @@ textarea {
     padding: 0.8rem 1rem 1rem;
     background: rgba(17, 17, 17, 0.06);
     border-top: 1px solid rgba(17, 17, 17, 0.08);
-}
-
-.projectModalMobileHint {
-    display: none;
 }
 
 .projectModalThumb {
@@ -2271,7 +2031,7 @@ textarea {
 
 @media screen and (max-width: 760px) {
     .pageShell {
-        width: min(100% - 1.25rem, 1160px);
+        width: min(100% - 1rem, 1160px);
     }
 
     .headerShell {
@@ -2312,16 +2072,14 @@ textarea {
         opacity: 0;
         visibility: hidden;
         position: fixed;
-        inset: 0;
-        width: 100vw;
-        height: 100dvh;
-        z-index: 1000;
-        padding: 1.25rem 1rem 1.5rem;
-        background: #000000;
+        inset: 0 0 0 auto;
+        width: min(320px, 82vw);
+        padding: 1.25rem;
+        background: rgba(17, 17, 17, 0.96);
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
         display: flex;
         flex-direction: column;
         gap: 1.2rem;
-        overflow-y: auto;
         transition: opacity 0.25s ease, visibility 0.25s ease;
     }
 
@@ -2334,18 +2092,16 @@ textarea {
         flex-direction: column;
         align-items: flex-start;
         width: 100%;
-        gap: 1.35rem;
-        padding-top: 0.65rem;
     }
 
     .navList a {
         color: white;
-        font-size: 1.35rem;
+        font-size: 1.06rem;
     }
 
     .navLangItem {
         margin-left: 0;
-        margin-top: 0.75rem;
+        margin-top: 0.5rem;
     }
 
     .langSwitch {
@@ -2377,22 +2133,18 @@ textarea {
     }
 
     .homePage main {
-        width: min(100% - 1.25rem, 1160px);
+        width: min(100% - 1rem, 1160px);
         min-height: calc(100vh - 190px);
         align-items: center;
     }
 
     .subPage main {
-        width: min(100% - 1.25rem, 1160px);
+        width: min(100% - 2.5rem, 1160px);
     }
 
     .encabezado {
         max-width: 100%;
         padding: 1rem 1rem 2rem;
-    }
-
-    .homePage .encabezado {
-        min-height: auto;
     }
 
     .encabezado h1 {
@@ -2426,11 +2178,6 @@ textarea {
         grid-template-columns: 1fr;
     }
 
-    .editorialPage .projectsGrid.refinedGrid {
-        grid-template-columns: 1fr;
-        max-width: 100%;
-    }
-
     .typeLine {
         font-size: clamp(2.5rem, 12vw, 4.1rem);
         opacity: 1;
@@ -2442,32 +2189,15 @@ textarea {
         grid-template-columns: 1fr;
     }
 
-    .homeActionRow {
-        gap: 1rem;
-    }
-
-    .homeMetricList,
-    .homeInfoGrid {
-        grid-template-columns: 1fr;
-    }
-
-    .homeInfoGrid {
-        width: min(100% - 1rem, 1160px);
-        padding: 0 1rem 2rem;
-        gap: 1.6rem;
-    }
-
     .contactPage main {
         min-height: auto;
-        padding-top: 0.35rem;
-        padding-bottom: 0.9rem;
+        padding-top: 0.3rem;
+        padding-bottom: 0.65rem;
     }
 
     .contactPage .contactFormCentered {
-        width: 100%;
-        max-width: 100%;
-        margin-inline: auto;
-        padding: 1.15rem 0.9rem 1rem;
+        width: min(100%, 100%);
+        padding: 1.1rem 0.9rem 1rem;
     }
 
     .contactPage .formHeroTitle {
@@ -2476,13 +2206,7 @@ textarea {
 
     .contactPage .contactFields,
     .contactPage .contactSubmit {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .contactPage .captchaWrap {
-        width: 100%;
-        max-width: 304px;
+        width: min(100%, 100%);
     }
 
     .contactPage .logo {
@@ -2510,22 +2234,11 @@ textarea {
         width: 100%;
         max-height: 100vh;
         border-radius: 0;
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch;
     }
 
     .projectModalMediaStage {
         min-height: 320px;
         padding: 0.8rem 0.75rem 0.4rem;
-    }
-
-    .projectModalBody {
-        height: auto;
-        min-height: 0;
-    }
-
-    .projectModalMedia {
-        overflow: visible;
     }
 
     .projectModalMedia img {
@@ -2534,38 +2247,11 @@ textarea {
     }
 
     .projectModalThumbs {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 0.55rem;
-        padding: 0.55rem 0.75rem 0.2rem;
-        overflow-x: auto;
-        background: rgba(17, 17, 17, 0.06);
-        border-top: 1px solid rgba(17, 17, 17, 0.08);
-    }
-
-    .projectModalThumb {
-        min-width: 0;
-        width: 100%;
-        padding: 0.22rem;
-        border-radius: 12px;
+        grid-template-columns: 1fr;
     }
 
     .projectModalThumb img {
-        width: 100%;
-        height: 72px;
-        border-radius: 8px;
-    }
-
-    .projectModalThumb span {
-        display: none;
-    }
-
-    .projectModalMobileHint {
-        display: block;
-        padding: 0 0.75rem 0.7rem;
-        color: rgba(17, 17, 17, 0.66);
-        font-size: 0.78rem;
-        line-height: 1.35;
+        height: 84px;
     }
 
     .sectionHeading,

@@ -12,7 +12,6 @@ const projectModalRole = document.querySelector("#projectModalRole");
 const projectModalDescription = document.querySelector("#projectModalDescription");
 const projectModalSkills = document.querySelector("#projectModalSkills");
 const projectModalThumbs = document.querySelector("#projectModalThumbs");
-const projectModalMobileHint = document.querySelector("#projectModalMobileHint");
 const projectModalPrev = document.querySelector("#projectModalPrev");
 const projectModalNext = document.querySelector("#projectModalNext");
 const projectCloseButtons = document.querySelectorAll("[data-project-close]");
@@ -327,9 +326,9 @@ const projectCatalog = {
         published: "Published on Sep 13, 2025",
         description: `Led the full setup of a business platform on Hostinger, including the purchase and configuration of the domain and corporate email accounts. I developed the web platform as the main medium for client interaction and integrated the PINED form with an automation workflow to streamline data collection and communication. The result combined professional presence with reduced manual work.`,
         skills: ["Domain Name Research", "n8n", "Web Development", "Hosting Setup", "Automation"],
-        image: "upwork-11-business-platform-diagram.svg",
+        image: "upwork-11-business-platform.png",
         gallery: [
-            "upwork-11-business-platform-diagram.svg"
+            "upwork-11-business-platform.png"
         ],
         upworkUrl: "https://www.upwork.com/freelancers/~014d065867a9933d2d?mp_source=share"
     },
@@ -434,73 +433,20 @@ const siteTranslations = {
         nav_about: "About",
         nav_projects: "Projects",
         nav_contact: "Contact",
-        home_kicker: "AI automation, CRM, MCP, and operations",
-        home_body: "AI automation and custom systems freelancer for LATAM and US clients. I build with GoHighLevel, n8n, MCP, voice AI, custom CRM integrations, and production-ready systems that remove manual work.",
-        home_cta: "See Selected Projects",
-        home_cta_secondary: "Start a Project",
-        home_badge_1: "GHL implementations",
-        home_badge_2: "MCP + ticketing",
-        home_badge_3: "Voice AI + chatbots",
-        home_badge_4: "300+ n8n workflows",
-        home_what_eyebrow: "What I do",
-        home_what_title: "Most of the work starts with automation, then expands into integration, CRM logic, or AI systems.",
-        home_what_intro: "The goal is usually the same: reduce manual work, improve response time, and make the operation cleaner without adding unnecessary complexity.",
-        home_what_item_1: "GoHighLevel implementations, snapshots, pipelines, and follow-up logic.",
-        home_what_item_2: "n8n workflows for sales, marketing, support, and operations.",
-        home_what_item_3: "Voice AI agents, WhatsApp systems, and website chatbots.",
-        home_what_item_4: "Custom CRM integrations, MCP flows, and production-ready systems.",
-        home_stack_eyebrow: "Stack I work with",
-        home_stack_title: "Tools I usually build with in delivery.",
-        home_metric_1: "AI voice agents built for qualification and follow-up.",
-        home_metric_2: "contacts processed through automated capture workflows.",
-        home_metric_3: "monthly subscriptions supported in an automated membership system.",
-        home_metric_4: "reduction in manual work in utility data-entry operations.",
-        home_build_eyebrow: "What I Build",
-        home_build_title: "Systems that usually make the biggest difference first.",
-        home_service_1_title: "Lead qualification systems",
-        home_service_1_text: "Voice agents, website agents, and CRM routing flows that respond faster and qualify better.",
-        home_service_2_title: "CRM and follow-up automation",
-        home_service_2_text: "Pipelines, contact logic, consent flows, and follow-up systems built inside the tools your team already uses.",
-        home_service_3_title: "Messaging and WhatsApp operations",
-        home_service_3_text: "WhatsApp platforms, lookup systems, and messaging flows connected to real business operations.",
-        home_service_4_title: "Internal ops and integrations",
-        home_service_4_text: "n8n workflows, APIs, dashboards, data movement, infrastructure, and connected systems that reduce repetitive work.",
-        home_fit_eyebrow: "Best Fit",
-        home_fit_title: "The best projects usually start with one of these bottlenecks.",
-        home_fit_1_title: "Leads are coming in, but follow-up is weak",
-        home_fit_1_text: "The team is losing speed between first contact, qualification, and booking.",
-        home_fit_2_title: "The CRM exists, but nobody trusts the process",
-        home_fit_2_text: "Contacts, statuses, and next steps are inconsistent, manual, or disconnected.",
-        home_fit_3_title: "Too much work depends on copy-paste",
-        home_fit_3_text: "People are moving data by hand across inboxes, sheets, forms, or multiple tools.",
-        home_fit_4_title: "Tools exist, but they do not talk to each other",
-        home_fit_4_text: "The business has software, but not a system that keeps information moving cleanly.",
-        home_process_eyebrow: "How I Work",
-        home_process_title: "Simple process. Useful first version. Then iteration.",
-        home_process_1_step: "Step 1",
-        home_process_1_title: "Find the bottleneck",
-        home_process_1_text: "We define where time, errors, or missed revenue are actually happening.",
-        home_process_2_step: "Step 2",
-        home_process_2_title: "Design the right system",
-        home_process_2_text: "The solution may be an automation, an agent, a CRM workflow, or a more complete stack.",
-        home_process_3_step: "Step 3",
-        home_process_3_title: "Ship and refine",
-        home_process_3_text: "Start with a usable version, test it in the operation, and improve from there.",
-        home_close_eyebrow: "Next Step",
-        home_close_title: "If the operation already works but feels manual, slow, or disconnected, that is usually the right place to improve.",
-        home_close_text: "The best starting point is usually one workflow, one qualification system, or one CRM bottleneck with clear business impact.",
+        home_body: "I build automation systems for real operations using n8n, GHL, AI agents, WhatsApp, CRM logic, deployment, and practical integrations that reduce manual work.",
+        home_cta: "See My Projects",
         about_eyebrow: "About",
-        about_title: "I'm Jose. I build AI automation, CRM systems, and custom operations workflows.",
-        about_intro: "Full stack when needed, but mostly hired to implement GHL, n8n, MCP, voice AI, and connected systems that remove manual work and make operations cleaner.",
-        about_story_1: "I work with LATAM and US clients building custom automation systems for sales, marketing, support, and internal operations. A lot of the work lives inside GoHighLevel, n8n, MCP-connected environments, and CRM integrations where teams need faster execution and better control.",
-        about_story_2: "That includes full GHL implementations and snapshots, MCP ticketing automations, voice AI agents, WhatsApp and chatbots, custom CRM integrations with tools like Chatwoot and HubSpot, and complete tech setups from domain and deployment to production-ready workflows.",
+        about_title: "I'm Jose. I build automation, CRM, and AI systems for real operations.",
+        about_intro: "Full stack when needed, but usually hired to remove manual work, connect tools, and make the operation cleaner.",
+        about_story_1: "I work where automation, CRM, AI, and business operations meet. I build flows in n8n, automate processes inside CRMs, connect tools through APIs, migrate systems, and create internal logic that helps teams move faster with less friction.",
+        about_story_2: "A lot of that work includes AI for business use: voice agents for lead qualification, website and messaging agents, WhatsApp workflows, CRM automations, and systems that keep information moving between platforms without manual repetition.",
         about_what_eyebrow: "What I Do",
         about_what_title: "Most of the work starts with automation, then expands into integration, product, or infrastructure.",
-        about_list_1: "GoHighLevel full implementations, snapshots, pipelines, and follow-up systems.",
-        about_list_2: "n8n workflows across marketing, sales, operations, and support.",
-        about_list_3: "Voice AI agents and chatbots for WhatsApp, web, and calling flows.",
-        about_list_4: "Custom CRM integrations across GHL, Chatwoot, HubSpot, and related tools.",
-        about_list_5: "MCP ticketing automations, production infrastructure, and complete stacks from domain to deployment.",
+        about_list_1: "Automation systems for operations using `n8n`, APIs, webhooks, and connected business logic.",
+        about_list_2: "CRM migrations, CRM integrations, and automations built directly inside the CRM environment.",
+        about_list_3: "AI voice agents for lead qualification and AI agents for websites, support, and messaging.",
+        about_list_4: "GoHighLevel workflows, contact logic, pipeline automations, and follow-up systems.",
+        about_list_5: "WhatsApp flows, internal tools, deployment, VPS setup, and production-ready infrastructure.",
         faq_eyebrow: "FAQ",
         faq_title: "What usually needs to be clarified before getting started.",
         faq_q1: "Do you work with a specific niche?",
@@ -523,33 +469,20 @@ const siteTranslations = {
         faq_a9: "It depends on scope. Some automations can move quickly, while a more complete system takes multiple stages. The normal approach is to start with a useful first version and iterate from there.",
         faq_q10: "How expensive can something like this be?",
         faq_a10: "It depends on the real scope of the project. Not everything requires a big budget. Many times it makes sense to start with something focused, useful, and well designed.",
-        contact_badge: "Start a Project",
-        contact_title: "Tell me what you're trying to automate.",
-        contact_text: 'Share your stack, bottleneck, and project type. Or reach out directly on <a href="https://wa.me/573142023012" target="_blank" rel="noopener noreferrer">WhatsApp</a> or <a href="https://www.linkedin.com/in/camargo-jose" target="_blank" rel="noopener noreferrer">LinkedIn</a>.',
+        contact_badge: "Contact Us",
+        contact_title: "Let's Get In Touch.",
+        contact_text: 'Or just reach out manually on <a href="https://wa.me/573142023012" target="_blank" rel="noopener noreferrer">WhatsApp</a> or <a href="https://www.linkedin.com/in/camargo-jose" target="_blank" rel="noopener noreferrer">LinkedIn</a>.',
         contact_name_label: "Full Name",
         contact_name_placeholder: "Enter your full name",
-        contact_company_label: "Company",
-        contact_company_placeholder: "Enter your company name",
         contact_email_label: "Email Address",
         contact_email_placeholder: "Enter your email address",
-        contact_phone_label: "WhatsApp",
-        contact_phone_placeholder: "Enter your WhatsApp number",
-        contact_stack_label: "Current Stack / CRM",
-        contact_stack_placeholder: "Example: HubSpot, GHL, Excel, WhatsApp, forms",
-        contact_project_type_label: "Project Type",
-        contact_project_type_default: "Select project type",
-        contact_project_type_option_1: "AI Voice Qualification",
-        contact_project_type_option_2: "CRM Automation",
-        contact_project_type_option_3: "WhatsApp / Messaging",
-        contact_project_type_option_4: "Internal Ops Automation",
-        contact_project_type_option_5: "Integrations / Infrastructure",
-        contact_message_label: "Main Bottleneck",
-        contact_message_placeholder: "What is slowing the operation down right now?",
+        contact_message_label: "Message",
+        contact_message_placeholder: "Tell me what you need help with.",
         contact_captcha_note: "reCAPTCHA will appear here once the site key is added.",
-        contact_submit: "Send Project Brief",
+        contact_submit: "Submit Form",
         projects_eyebrow: "Portfolio",
-        projects_title: "Systems built to qualify leads, automate follow-up, and remove manual work.",
-        projects_intro: "Voice AI, WhatsApp systems, CRM automation, lead generation, dashboards, infrastructure, and custom operations delivered through real client work.",
+        projects_title: "Selected Upwork projects focused on automation, CRM, AI, and operations.",
+        projects_intro: "Messaging systems, CRM flows, AI agents, infrastructure, dashboards, and business platforms built for real operations.",
         projects_stat_1: "Published project cases",
         projects_stat_2: "Job Success",
         projects_stat_3: "Live Upwork badge",
@@ -591,7 +524,6 @@ const siteTranslations = {
         project_excerpt_17: "10+ AI voice agents with ~47% faster response and close to 90% qualification performance across multiple industries.",
         project_excerpt_18: "MCP server connected to ticketing, GPT interfaces, CIPP, and Microsoft tenant workflows for centralized enterprise control.",
         project_open_case: "Open case",
-        project_mobile_hint: "Tap a thumbnail or use the arrows.",
         project_modal_label: "Case",
         project_modal_cta: "View on Upwork",
         contact_status_captcha_loading: "reCAPTCHA is still loading.",
@@ -620,73 +552,20 @@ const siteTranslations = {
         nav_about: "Perfil",
         nav_projects: "Proyectos",
         nav_contact: "Contacto",
-        home_kicker: "Automatización IA, CRM, MCP y operaciones",
-        home_body: "Freelancer de automatización IA y sistemas a medida para clientes en LATAM y US. Construyo con GoHighLevel, n8n, MCP, voice AI, integraciones CRM y sistemas listos para producción que eliminan trabajo manual.",
-        home_cta: "Ver proyectos seleccionados",
-        home_cta_secondary: "Iniciar un proyecto",
-        home_badge_1: "Implementaciones GHL",
-        home_badge_2: "MCP + ticketing",
-        home_badge_3: "Voice AI + chatbots",
-        home_badge_4: "300+ workflows en n8n",
-        home_what_eyebrow: "Lo que hago",
-        home_what_title: "Gran parte del trabajo empieza con automatización y luego se expande hacia integración, lógica CRM o sistemas con IA.",
-        home_what_intro: "El objetivo suele ser el mismo: reducir trabajo manual, mejorar tiempos de respuesta y dejar la operación más limpia sin meter complejidad innecesaria.",
-        home_what_item_1: "Implementaciones en GoHighLevel, snapshots, pipelines y lógica de seguimiento.",
-        home_what_item_2: "Workflows en n8n para ventas, marketing, soporte y operaciones.",
-        home_what_item_3: "Agentes de voz, sistemas por WhatsApp y chatbots para sitios web.",
-        home_what_item_4: "Integraciones CRM, flujos MCP y sistemas listos para producción.",
-        home_stack_eyebrow: "Stack con el que trabajo",
-        home_stack_title: "Herramientas con las que normalmente construyo en entrega.",
-        home_metric_1: "agentes de voz con IA construidos para calificación y seguimiento.",
-        home_metric_2: "contactos procesados por flujos automáticos de captura.",
-        home_metric_3: "suscripciones mensuales soportadas en un sistema automatizado de memberships.",
-        home_metric_4: "de reducción de trabajo manual en operaciones de data entry.",
-        home_build_eyebrow: "Lo que construyo",
-        home_build_title: "Sistemas que normalmente generan impacto primero.",
-        home_service_1_title: "Sistemas de calificación de leads",
-        home_service_1_text: "Agentes de voz, agentes web y flujos de CRM que responden más rápido y califican mejor.",
-        home_service_2_title: "Automatización de CRM y seguimiento",
-        home_service_2_text: "Pipelines, lógica de contactos, consent flows y sistemas de follow-up dentro de las herramientas que tu equipo ya usa.",
-        home_service_3_title: "Mensajería y operaciones por WhatsApp",
-        home_service_3_text: "Plataformas de WhatsApp, sistemas de lookup y flujos de mensajería conectados a operaciones reales.",
-        home_service_4_title: "Operación interna e integraciones",
-        home_service_4_text: "Workflows en n8n, APIs, dashboards, movimiento de datos, infraestructura y sistemas conectados que reducen trabajo repetitivo.",
-        home_fit_eyebrow: "Dónde encajo mejor",
-        home_fit_title: "Los mejores proyectos suelen empezar con uno de estos cuellos de botella.",
-        home_fit_1_title: "Entran leads, pero el seguimiento es débil",
-        home_fit_1_text: "El equipo pierde velocidad entre el primer contacto, la calificación y la agenda.",
-        home_fit_2_title: "Existe CRM, pero nadie confía en el proceso",
-        home_fit_2_text: "Los contactos, estados y siguientes pasos son inconsistentes, manuales o están desconectados.",
-        home_fit_3_title: "Demasiado trabajo depende de copiar y pegar",
-        home_fit_3_text: "La gente mueve datos a mano entre correos, hojas, formularios o múltiples herramientas.",
-        home_fit_4_title: "Hay herramientas, pero no se comunican entre sí",
-        home_fit_4_text: "El negocio tiene software, pero no un sistema que mantenga la información moviéndose de forma limpia.",
-        home_process_eyebrow: "Cómo trabajo",
-        home_process_title: "Proceso simple. Primera versión útil. Luego iteración.",
-        home_process_1_step: "Paso 1",
-        home_process_1_title: "Encontrar el cuello de botella",
-        home_process_1_text: "Definimos dónde se está perdiendo tiempo, dinero, velocidad o calidad.",
-        home_process_2_step: "Paso 2",
-        home_process_2_title: "Diseñar el sistema correcto",
-        home_process_2_text: "La solución puede ser una automatización, un agente, un workflow de CRM o un stack más completo.",
-        home_process_3_step: "Paso 3",
-        home_process_3_title: "Lanzar y refinar",
-        home_process_3_text: "Se empieza con una versión usable, se prueba en operación y se mejora desde ahí.",
-        home_close_eyebrow: "Siguiente paso",
-        home_close_title: "Si la operación ya funciona pero se siente manual, lenta o desconectada, normalmente ese es el lugar correcto para mejorar.",
-        home_close_text: "El mejor punto de partida suele ser un workflow, un sistema de calificación o un cuello de botella dentro del CRM con impacto claro en negocio.",
+        home_body: "Construyo sistemas de automatización para operaciones reales usando n8n, GHL, agentes de IA, WhatsApp, lógica de CRM, despliegue e integraciones prácticas que reducen trabajo manual.",
+        home_cta: "Ver mis proyectos",
         about_eyebrow: "Perfil",
-        about_title: "Soy Jose. Construyo automatización con IA, sistemas CRM y operaciones conectadas.",
-        about_intro: "Full stack cuando hace falta, pero la mayoría del tiempo me contratan para implementar GHL, n8n, MCP, voice AI y sistemas conectados que eliminan trabajo manual y limpian la operación.",
-        about_story_1: "Trabajo con clientes en LATAM y US construyendo sistemas a medida para ventas, marketing, soporte y operación interna. Gran parte de ese trabajo vive dentro de GoHighLevel, n8n, entornos conectados por MCP e integraciones CRM donde los equipos necesitan más velocidad y mejor control.",
-        about_story_2: "Eso incluye implementaciones completas en GHL y snapshots, automatizaciones de ticketing vía MCP, agentes de voz, chatbots para WhatsApp y web, integraciones CRM con herramientas como Chatwoot y HubSpot, y stacks completos desde dominio y despliegue hasta flujos listos para producción.",
+        about_title: "Soy Jose. Construyo automatización, CRM y sistemas de IA para operaciones reales.",
+        about_intro: "Full stack cuando hace falta, pero normalmente me contratan para quitar trabajo manual, conectar herramientas y dejar la operación más limpia.",
+        about_story_1: "Trabajo donde se encuentran automatización, CRM, IA y operaciones de negocio. Construyo flujos en n8n, automatizo procesos dentro de CRMs, conecto herramientas por APIs, migro sistemas y creo lógica interna que ayuda a los equipos a moverse más rápido y con menos fricción.",
+        about_story_2: "Gran parte de ese trabajo incluye IA aplicada al negocio: agentes de voz para calificación de leads, agentes para web y mensajería, flujos de WhatsApp, automatizaciones dentro del CRM y sistemas que mueven información entre plataformas sin repetición manual.",
         about_what_eyebrow: "Lo que hago",
         about_what_title: "Gran parte del trabajo empieza con automatización y luego se expande hacia integración, producto o infraestructura.",
-        about_list_1: "Implementaciones completas en GoHighLevel, snapshots, pipelines y sistemas de seguimiento.",
-        about_list_2: "Workflows en n8n para marketing, ventas, operaciones y soporte.",
-        about_list_3: "Agentes de voz y chatbots para WhatsApp, web y flujos de llamadas.",
-        about_list_4: "Integraciones CRM con GHL, Chatwoot, HubSpot y herramientas relacionadas.",
-        about_list_5: "Automatizaciones MCP para ticketing, infraestructura productiva y stacks completos desde dominio hasta deployment.",
+        about_list_1: "Sistemas de automatización para operaciones usando `n8n`, APIs, webhooks y lógica de negocio conectada.",
+        about_list_2: "Migraciones de CRM, integraciones con CRM y automatizaciones construidas directamente dentro del entorno del CRM.",
+        about_list_3: "Agentes de voz con IA para calificación de leads y agentes para sitios web, soporte y mensajería.",
+        about_list_4: "Workflows en GoHighLevel, lógica de contactos, automatizaciones de pipeline y sistemas de seguimiento.",
+        about_list_5: "Flujos de WhatsApp, herramientas internas, despliegue, configuración de VPS e infraestructura lista para producción.",
         faq_eyebrow: "Preguntas frecuentes",
         faq_title: "Lo que normalmente hay que aclarar antes de empezar.",
         faq_q1: "¿Trabajas con un nicho específico?",
@@ -709,33 +588,20 @@ const siteTranslations = {
         faq_a9: "Depende del alcance. Algunas automatizaciones pueden salir rápido, mientras que un sistema más completo toma varias etapas. Lo normal es empezar por una primera versión útil e iterar desde ahí.",
         faq_q10: "¿Qué tan costoso puede ser algo así?",
         faq_a10: "Depende del alcance real del proyecto. No todo requiere un presupuesto alto. Muchas veces tiene sentido empezar por algo puntual, útil y bien pensado.",
-        contact_badge: "Iniciar proyecto",
-        contact_title: "Cuéntame qué quieres automatizar.",
-        contact_text: 'Compárteme tu stack, cuello de botella y tipo de proyecto. O escríbeme directamente por <a href="https://wa.me/573142023012" target="_blank" rel="noopener noreferrer">WhatsApp</a> o <a href="https://www.linkedin.com/in/camargo-jose" target="_blank" rel="noopener noreferrer">LinkedIn</a>.',
+        contact_badge: "Contacto",
+        contact_title: "Hablemos.",
+        contact_text: 'O escríbeme directamente por <a href="https://wa.me/573142023012" target="_blank" rel="noopener noreferrer">WhatsApp</a> o <a href="https://www.linkedin.com/in/camargo-jose" target="_blank" rel="noopener noreferrer">LinkedIn</a>.',
         contact_name_label: "Nombre completo",
         contact_name_placeholder: "Escribe tu nombre completo",
-        contact_company_label: "Empresa",
-        contact_company_placeholder: "Escribe el nombre de tu empresa",
         contact_email_label: "Correo electrónico",
         contact_email_placeholder: "Escribe tu correo electrónico",
-        contact_phone_label: "WhatsApp",
-        contact_phone_placeholder: "Escribe tu número de WhatsApp",
-        contact_stack_label: "Stack actual / CRM",
-        contact_stack_placeholder: "Ejemplo: HubSpot, GHL, Excel, WhatsApp, formularios",
-        contact_project_type_label: "Tipo de proyecto",
-        contact_project_type_default: "Selecciona el tipo de proyecto",
-        contact_project_type_option_1: "Calificación con IA de voz",
-        contact_project_type_option_2: "Automatización CRM",
-        contact_project_type_option_3: "WhatsApp / Mensajería",
-        contact_project_type_option_4: "Automatización operativa",
-        contact_project_type_option_5: "Integraciones / Infraestructura",
-        contact_message_label: "Principal cuello de botella",
-        contact_message_placeholder: "¿Qué está frenando hoy la operación?",
+        contact_message_label: "Mensaje",
+        contact_message_placeholder: "Cuéntame en qué necesitas ayuda.",
         contact_captcha_note: "reCAPTCHA aparecerá aquí cuando la site key esté configurada.",
-        contact_submit: "Enviar resumen del proyecto",
+        contact_submit: "Enviar formulario",
         projects_eyebrow: "Portafolio",
-        projects_title: "Sistemas construidos para calificar leads, automatizar seguimiento y quitar trabajo manual.",
-        projects_intro: "Voice AI, sistemas por WhatsApp, automatización CRM, generación de leads, dashboards, infraestructura y operaciones personalizadas entregadas en trabajo real con clientes.",
+        projects_title: "Proyectos de Upwork enfocados en automatización, CRM, IA y operaciones.",
+        projects_intro: "Sistemas de mensajería, flujos de CRM, agentes de IA, infraestructura, dashboards y plataformas de negocio construidas para operaciones reales.",
         projects_stat_1: "Casos publicados",
         projects_stat_2: "Job Success",
         projects_stat_3: "Badge activo en Upwork",
@@ -777,7 +643,6 @@ const siteTranslations = {
         project_excerpt_17: "10+ agentes de voz con ~47% mejor respuesta y cerca de 90% de cualificación en múltiples industrias.",
         project_excerpt_18: "Servidor MCP conectado a ticketing, interfaces con GPT, CIPP y flujos de Microsoft tenants para control empresarial centralizado.",
         project_open_case: "Abrir caso",
-        project_mobile_hint: "Toca una miniatura o usa las flechas.",
         project_modal_label: "Caso",
         project_modal_cta: "Ver en Upwork",
         contact_status_captcha_loading: "reCAPTCHA todavía está cargando.",
@@ -809,22 +674,17 @@ function getTranslation(language, key, fallback = "") {
 }
 
 if (nav && abrir && cerrar) {
-    const setMenuOpen = (open) => {
-        nav.classList.toggle("visible", open);
-        document.body.classList.toggle("menu-open", open);
-    };
-
     abrir.addEventListener("click", () => {
-        setMenuOpen(true);
+        nav.classList.add("visible");
     });
 
     cerrar.addEventListener("click", () => {
-        setMenuOpen(false);
+        nav.classList.remove("visible");
     });
 
     navLinks.forEach((link) => {
         link.addEventListener("click", () => {
-            setMenuOpen(false);
+            nav.classList.remove("visible");
         });
     });
 }
@@ -929,11 +789,7 @@ if (homeTitle && homeTitleText) {
             return;
         }
 
-        const phrases = readPhrases();
-        const firstPhrase = phrases[0] || fallbackPhrase;
-        homeTitleText.textContent = firstPhrase;
-        phraseIndex = 0;
-        characterIndex = firstPhrase.length;
+        homeTitleText.textContent = "";
 
         const animateTitle = () => {
             if (token !== animationToken) {
@@ -968,10 +824,7 @@ if (homeTitle && homeTitleText) {
             window.setTimeout(animateTitle, typingDelay);
         };
 
-        window.setTimeout(() => {
-            isDeleting = true;
-            animateTitle();
-        }, 1800);
+        window.setTimeout(animateTitle, 320);
     };
 
     startTypingAnimation();
@@ -999,15 +852,10 @@ if (projectModal && projectButtons.length > 0) {
         projectModalImage.src = `${assetBase}/${gallery[activeImageIndex]}`;
         projectModalImage.alt = `${project.title} image ${activeImageIndex + 1}`;
 
-        if (projectModalMobileHint) {
-            projectModalMobileHint.hidden = gallery.length <= 1;
-        }
-
         if (!projectModalThumbs) {
             return;
         }
 
-        projectModalThumbs.hidden = gallery.length <= 1;
         projectModalThumbs.innerHTML = "";
 
         gallery.forEach((imageName, index) => {
@@ -1164,27 +1012,6 @@ function loadRecaptchaScript() {
     return window.__recaptchaLoaderPromise;
 }
 
-function fitRecaptchaWidget(mount) {
-    if (!mount) {
-        return;
-    }
-
-    const widget = mount.firstElementChild;
-    if (!widget) {
-        return;
-    }
-
-    const availableWidth = mount.clientWidth || 0;
-    const baseWidth = 304;
-    const scale = availableWidth > 0 ? Math.min(1, availableWidth / baseWidth) : 1;
-
-    widget.style.transform = `scale(${scale})`;
-    widget.style.transformOrigin = "center top";
-    widget.style.width = `${baseWidth}px`;
-    widget.style.margin = "0 auto";
-    mount.style.minHeight = `${78 * scale}px`;
-}
-
 if (contactForm) {
     const webhookUrl = (contactForm.getAttribute("data-webhook-url") || "").trim();
     const recaptchaSiteKey = (contactForm.getAttribute("data-recaptcha-sitekey") || "").trim();
@@ -1246,7 +1073,6 @@ if (contactForm) {
                         sitekey: recaptchaSiteKey,
                         theme: "light"
                     });
-                    window.requestAnimationFrame(() => fitRecaptchaWidget(recaptchaMount));
                 })
                 .catch(() => {
                     setContactStatus(getTranslation(currentLanguage, "contact_status_error", "Could not send the form. Please try again."), "error");
@@ -1264,7 +1090,6 @@ if (contactForm) {
 
         resetSubmitButton();
     });
-    window.addEventListener("resize", () => fitRecaptchaWidget(recaptchaMount));
 
     contactForm.addEventListener("submit", async (event) => {
         event.preventDefault();
@@ -1276,12 +1101,10 @@ if (contactForm) {
             company: (formData.get("company") || "").toString().trim(),
             email: (formData.get("email") || "").toString().trim(),
             phone: (formData.get("phone") || "").toString().trim(),
-            currentStack: (formData.get("currentStack") || "").toString().trim(),
-            projectType: (formData.get("projectType") || "").toString().trim(),
             message: (formData.get("message") || "").toString().trim(),
             recaptchaToken: captchaToken,
             "g-recaptcha-response": captchaToken,
-            source: "jose-camargo-portfolio",
+            source: "marpicorp-website",
             submittedAt: new Date().toISOString(),
             language: document.documentElement.lang || "en",
             pageUrl: window.location.href
@@ -1550,7 +1373,6 @@ function initAiChatWidget() {
                         }
                     }
                 });
-                window.requestAnimationFrame(() => fitRecaptchaWidget(gateCaptcha));
             })
             .catch(() => {
                 if (gateNote) {
@@ -1563,7 +1385,6 @@ function initAiChatWidget() {
     syncChatLanguage();
     window.addEventListener("site-language-change", syncChatLanguage);
     renderChatCaptcha();
-    window.addEventListener("resize", () => fitRecaptchaWidget(gateCaptcha));
 
     if (toggle) {
         toggle.addEventListener("click", () => {

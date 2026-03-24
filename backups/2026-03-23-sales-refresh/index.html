@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <meta name="description"
+        content="Jose Camargo builds automation systems for operations using n8n, GHL, AI agents, WhatsApp, custom integrations, and production-ready infrastructure." />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Jose Camargo | Automation Systems</title>
+</head>
+
+<body class="homePage">
+    <header>
+        <a href="index.html"><img src="img/logo.png" alt="Logo de JC DEV" class="logo" /></a>
+        <button class="abrirMenu" id="abrir" aria-label="Open menu"><i class="bi bi-list"></i></button>
+        <nav class="nav" id="nav">
+            <button class="cerrarMenu" id="cerrar" aria-label="Close menu"><i class="bi bi-x-lg"></i></button>
+            <ul class="navList">
+                <li><a href="pages/about.html" data-i18n="nav_about">About</a></li>
+                <li><a href="pages/projects.html" data-i18n="nav_projects">Projects</a></li>
+                <li><a href="pages/contact.html" data-i18n="nav_contact">Contact</a></li>
+                <li class="navLangItem">
+                    <div class="langSwitch" role="group" aria-label="Language switch">
+                        <button class="langSwitchButton" type="button" data-lang-button="es" aria-pressed="false">ES</button>
+                        <button class="langSwitchButton" type="button" data-lang-button="en" aria-pressed="true">EN</button>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="encabezado" data-reveal>
+            <h1 class="homeTitle"
+                data-home-phrases-en='["Hey, I\u0027m Jose Camargo.","I like cats.","I enjoy solving Rubik\u0027s cubes."]'
+                data-home-phrases-es='["Hola, soy Jose Camargo.","Me gustan los gatos.","Disfruto resolver cubos Rubik."]'>
+                <span data-home-title-text>Greetings! I'm Jose Camargo</span><span class="typingCaret"
+                    aria-hidden="true"></span>
+            </h1>
+            <p data-i18n="home_body">
+                I build automation systems for real operations using n8n, GHL, AI agents, WhatsApp, CRM logic,
+                deployment, and practical integrations that reduce manual work.
+            </p>
+            <div class="seeMore">
+                <a href="pages/projects.html" data-i18n="home_cta">
+                    See My Projects
+                </a>
+                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"
+                    aria-hidden="true">
+                    <path
+                        d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"></path>
+                </svg>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <ul class="pie">
+            <li>
+                <a href="https://www.linkedin.com/in/camargo-jose" target="_blank" rel="noopener noreferrer"><img
+                        src="img/social.png" alt="Imagen de linkedin" /></a>
+            </li>
+            <li>
+                <a href="https://wa.me/573142023012" target="_blank" rel="noopener noreferrer"><img src="img/whatsapp.png"
+                        alt="Imagen de Whatsapp" /></a>
+            </li>
+            <li>
+                <a href="https://github.com/joseCamargo12" target="_blank" rel="noopener noreferrer"><img
+                        src="img/github.png" alt="Imagen de GitHub" /></a>
+            </li>
+        </ul>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

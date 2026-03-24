@@ -1,0 +1,61 @@
+<svg width="1600" height="980" viewBox="0 0 1600 980" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="980" rx="36" fill="#F3EFE8"/>
+  <rect x="36" y="36" width="1528" height="908" rx="28" fill="#FBF9F5" stroke="#D9D2C7" stroke-width="2"/>
+
+  <circle cx="134" cy="124" r="10" fill="#5F5B55"/>
+  <circle cx="168" cy="124" r="10" fill="#B8B4AB"/>
+  <circle cx="202" cy="124" r="10" fill="#D9D2C7"/>
+
+  <text x="92" y="220" fill="#111111" font-family="Inconsolata, monospace" font-size="74" font-weight="700">
+    Business Platform Setup
+  </text>
+  <text x="92" y="272" fill="#5F5B55" font-family="Inconsolata, monospace" font-size="26">
+    Domain, corporate email, website delivery, and automation workflow in one business stack
+  </text>
+
+  <rect x="92" y="340" width="300" height="144" rx="28" fill="#F5F1EA" stroke="#D8D0C4" stroke-width="2"/>
+  <text x="124" y="392" fill="#5F5B55" font-family="Inconsolata, monospace" font-size="21">LAYER 01</text>
+  <text x="124" y="438" fill="#111111" font-family="Inconsolata, monospace" font-size="34" font-weight="700">Domain + Brand</text>
+  <text x="124" y="472" fill="#4C4C4C" font-family="Inconsolata, monospace" font-size="22">DNS, routing, public entrypoint</text>
+
+  <rect x="448" y="340" width="300" height="144" rx="28" fill="#F5F1EA" stroke="#D8D0C4" stroke-width="2"/>
+  <text x="480" y="392" fill="#5F5B55" font-family="Inconsolata, monospace" font-size="21">LAYER 02</text>
+  <text x="480" y="438" fill="#111111" font-family="Inconsolata, monospace" font-size="34" font-weight="700">Hostinger Infra</text>
+  <text x="480" y="472" fill="#4C4C4C" font-family="Inconsolata, monospace" font-size="22">Hosting, deployment, admin setup</text>
+
+  <rect x="804" y="340" width="300" height="144" rx="28" fill="#F5F1EA" stroke="#D8D0C4" stroke-width="2"/>
+  <text x="836" y="392" fill="#5F5B55" font-family="Inconsolata, monospace" font-size="21">LAYER 03</text>
+  <text x="836" y="438" fill="#111111" font-family="Inconsolata, monospace" font-size="34" font-weight="700">Corporate Email</text>
+  <text x="836" y="472" fill="#4C4C4C" font-family="Inconsolata, monospace" font-size="22">Inbox structure and client comms</text>
+
+  <rect x="1160" y="340" width="348" height="144" rx="28" fill="#5F5B55"/>
+  <text x="1192" y="392" fill="#EDE7DE" font-family="Inconsolata, monospace" font-size="21">LAYER 04</text>
+  <text x="1192" y="438" fill="#FFFFFF" font-family="Inconsolata, monospace" font-size="34" font-weight="700">Business Website</text>
+  <text x="1192" y="472" fill="#F2ECE2" font-family="Inconsolata, monospace" font-size="22">Main client-facing platform</text>
+
+  <path d="M392 412H448" stroke="#111111" stroke-width="4" stroke-linecap="round"/>
+  <path d="M748 412H804" stroke="#111111" stroke-width="4" stroke-linecap="round"/>
+  <path d="M1104 412H1160" stroke="#111111" stroke-width="4" stroke-linecap="round"/>
+
+  <rect x="184" y="582" width="1232" height="264" rx="36" fill="#F7F3EC" stroke="#D8D0C4" stroke-width="2"/>
+  <text x="232" y="644" fill="#5F5B55" font-family="Inconsolata, monospace" font-size="22">AUTOMATION FLOW</text>
+  <text x="232" y="696" fill="#111111" font-family="Inconsolata, monospace" font-size="42" font-weight="700">
+    Website form -> intake automation -> client communication
+  </text>
+
+  <rect x="232" y="736" width="240" height="72" rx="20" fill="#FFFFFF" stroke="#D8D0C4" stroke-width="2"/>
+  <text x="270" y="781" fill="#111111" font-family="Inconsolata, monospace" font-size="28" font-weight="700">PINED Form</text>
+
+  <rect x="536" y="736" width="288" height="72" rx="20" fill="#FFFFFF" stroke="#D8D0C4" stroke-width="2"/>
+  <text x="574" y="781" fill="#111111" font-family="Inconsolata, monospace" font-size="28" font-weight="700">n8n Workflow Logic</text>
+
+  <rect x="888" y="736" width="240" height="72" rx="20" fill="#FFFFFF" stroke="#D8D0C4" stroke-width="2"/>
+  <text x="926" y="781" fill="#111111" font-family="Inconsolata, monospace" font-size="28" font-weight="700">Structured Intake</text>
+
+  <rect x="1192" y="736" width="176" height="72" rx="20" fill="#111111"/>
+  <text x="1235" y="781" fill="#FFFFFF" font-family="Inconsolata, monospace" font-size="28" font-weight="700">Follow-up</text>
+
+  <path d="M472 772H536" stroke="#5F5B55" stroke-width="4" stroke-linecap="round"/>
+  <path d="M824 772H888" stroke="#5F5B55" stroke-width="4" stroke-linecap="round"/>
+  <path d="M1128 772H1192" stroke="#5F5B55" stroke-width="4" stroke-linecap="round"/>
+</svg>

@@ -1,48 +1,522 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon" />
-    <meta name="description" content=" Hey, I'm Jose Camargo – a tech enthusiast skilled in problem-solving. Explore
-        how my experience fits your software needs. Learn more about me now!">
-    
+    <meta name="description"
+        content="Portfolio of automation systems, AI workflows, WhatsApp platforms, CRM logic, analytics, and infrastructure projects published on Upwork." />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <!-- Style sheet -->
     <link rel="stylesheet" href="../css/style.css">
-    <title>JC DEV -- Projects</title>
+    <title>Jose Camargo | Portfolio</title>
 </head>
-<body>
+
+<body class="subPage">
     <header>
-        <a href="../Index.html"> <img src="../img/logo.png" alt="Logo de JC DEV" class="logo" /> </a>
-        <button class="abrirMenu" id="abrir"><i class="bi bi-list"></i></button>
+        <a href="../index.html"><img src="../img/logo.png" alt="Logo de JC DEV" class="logo" /></a>
+        <button class="abrirMenu" id="abrir" aria-label="Open menu"><i class="bi bi-list"></i></button>
         <nav class="nav" id="nav">
-            <button class="cerrarMenu" id="cerrar"><i class="bi bi-x-lg"></i></button>
+            <button class="cerrarMenu" id="cerrar" aria-label="Close menu"><i class="bi bi-x-lg"></i></button>
             <ul class="navList">
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="../index.html" data-i18n="nav_home">Home</a></li>
+                <li><a href="about.html" data-i18n="nav_about">About</a></li>
+                <li><a href="projects.html" data-i18n="nav_projects">Projects</a></li>
+                <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+                <li class="navLangItem">
+                    <div class="langSwitch" role="group" aria-label="Language switch">
+                        <button class="langSwitchButton" type="button" data-lang-button="es" aria-pressed="false">ES</button>
+                        <button class="langSwitchButton" type="button" data-lang-button="en" aria-pressed="true">EN</button>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
 
-    <section>
-        <h1>About me.</h1>
-    </section>
+    <main class="contentPage pageShell editorialPage">
+        <section class="pageIntro compactIntro projectsIntro" data-reveal>
+            <p class="eyebrow" data-i18n="projects_eyebrow">Portfolio</p>
+            <h1 data-i18n="projects_title">Systems built to qualify leads, automate follow-up, and remove manual work.</h1>
+            <p data-i18n="projects_intro">
+                Voice AI, WhatsApp systems, CRM automation, lead generation, dashboards, infrastructure, and custom
+                operations delivered through real client work.
+            </p>
+        </section>
+
+        <section class="projectsGrid refinedGrid" aria-label="Portfolio projects">
+            <article class="projectCard" data-reveal data-project-open="voice-agent-qualification-system">
+                <div class="projectMedia">
+                    <img src="../img/upwork-17-voice-agents-1.jpeg"
+                        alt="Preview of the AI voice qualification system" />
+                </div>
+                <div class="projectBody">
+                    <div class="projectTop">
+                        <p class="projectIndex">01</p>
+                        <p class="projectType" data-i18n="project_type_17">Voice AI</p>
+                    </div>
+                    <h2>AI Voice Agents for Qualification & Follow-Up</h2>
+                    <p class="projectExcerpt" data-i18n="project_excerpt_17">10+ AI voice agents with ~47% faster response and close to 90% qualification performance across multiple industries.</p>
+                    <ul class="projectTags">
+                        <li>GHL</li>
+                        <li>Voice AI</li>
+                        <li>CRM</li>
+                    </ul>
+                    <div class="projectActions">
+                        <button class="projectButton" type="button" data-project-open="voice-agent-qualification-system" data-i18n="project_open_case">Open case</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="projectCard" data-reveal data-project-open="whatsapp-platform">
+                <div class="projectMedia">
+                    <img src="../img/upwork-01-whatsapp-platform.png"
+                        alt="Preview of the multi-user WhatsApp messaging platform" />
+                </div>
+                <div class="projectBody">
+                    <div class="projectTop">
+                        <p class="projectIndex">02</p>
+                        <p class="projectType" data-i18n="project_type_1">WhatsApp Ops</p>
+                    </div>
+                    <h2>Multi-User WhatsApp Messaging Platform</h2>
+                    <p class="projectExcerpt" data-i18n="project_excerpt_1">Secure API architecture for multi-account messaging, queues, and
+                        centralized operations.</p>
+                    <ul class="projectTags">
+                        <li>WhatsApp</li>
+                        <li>Supabase</li>
+                        <li>CRM</li>
+                    </ul>
+                    <div class="projectActions">
+                        <button class="projectButton" type="button" data-project-open="whatsapp-platform" data-i18n="project_open_case">Open case</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="projectCard" data-reveal data-project-open="ai-chatbot">
+                <div class="projectMedia">
+                    <img src="../img/upwork-02-ai-chatbot.png" alt="Preview of the AI website chatbot project" />
+                </div>
+                <div class="projectBody">
+                    <div class="projectTop">
+                        <p class="projectIndex">03</p>
+                        <p class="projectType" data-i18n="project_type_2">AI Agent</p>
+                    </div>
+                    <h2>Web-Embedded AI Strategic Chatbot</h2>
+                    <p class="projectExcerpt" data-i18n="project_excerpt_2">Website agent for lead capture, service explanation, and intelligent
+                        interaction.</p>
+                    <ul class="projectTags">
+                        <li>n8n</li>
+                        <li>Gemini</li>
+                        <li>Webhooks</li>
+                    </ul>
+                    <div class="projectActions">
+                        <button class="projectButton" type="button" data-project-open="ai-chatbot" data-i18n="project_open_case">Open case</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="projectCard" data-reveal data-project-open="lead-generator">
+                <div class="projectMedia">
+                    <img src="../img/upwork-12-lead-generator.png"
+                        alt="Preview of the lead generator automation system" />
+                </div>
+                <div class="projectBody">
+                    <div class="projectTop">
+                        <p class="projectIndex">04</p>
+                        <p class="projectType" data-i18n="project_type_12">Lead Engine</p>
+                    </div>
+                    <h2>Lead Generator Automation System</h2>
+                    <p class="projectExcerpt" data-i18n="project_excerpt_12">Google-based lead scraping, database storage, enrichment flow, and qualification-ready intake.</p>
+                    <ul class="projectTags">
+                        <li>Leads</li>
+                        <li>Scraping</li>
+                        <li>Automation</li>
+                    </ul>
+                    <div class="projectActions">
+                        <button class="projectButton" type="button" data-project-open="lead-generator" data-i18n="project_open_case">Open case</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="projectCard" data-reveal data-project-open="consent-automation">
+                <div class="projectMedia">
+                    <img src="../img/upwork-05-consent-automation.png"
+                        alt="Preview of the consent and contact validation project" />
+                </div>
+                <div class="projectBody">
+                    <div class="projectTop">
+                        <p class="projectIndex">05</p>
+                        <p class="projectType" data-i18n="project_type_5">CRM Logic</p>
+                    </div>
+                    <h2>Consent Management & Contact Validation</h2>
+                    <p class="projectExcerpt" data-i18n="project_excerpt_5">Consent messaging, deduplication, and cleaner CRM operations before follow-up.</p>
+                    <ul class="projectTags">
+                        <li>Validation</li>
+                        <li>CRM Automation</li>
+                        <li>WhatsApp</li>
+                    </ul>
+                    <div class="projectActions">
+                        <button class="projectButton" type="button" data-project-open="consent-automation" data-i18n="project_open_case">Open case</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="projectCard" data-reveal data-project-open="customer-lookup">
+                <div class="projectMedia">
+                    <img src="../img/upwork-06-customer-lookup.png"
+                        alt="Preview of the customer identification automation" />
+                </div>
+                <div class="projectBody">
+                    <div class="projectTop">
+                        <p class="projectIndex">06</p>
+                        <p class="projectType" data-i18n="project_type_6">Lookup Automation</p>
+                    </div>
+                    <h2>WhatsApp Customer Identification & Lookup</h2>
+                    <p class="projectExcerpt" data-i18n="project_excerpt_6">Customer recognition, multi-source queries, and unified profiles in real time.</p>
+                    <ul class="projectTags">
+                        <li>n8n</li>
+                        <li>WhatsApp</li>
+                        <li>Data</li>
+                    </ul>
+                    <div class="projectActions">
+                        <button class="projectButton" type="button" data-project-open="customer-lookup" data-i18n="project_open_case">Open case</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="projectCard" data-reveal data-project-open="business-platform">
+                <div class="projectMedia">
+                    <img src="../img/upwork-11-business-platform-diagram.svg"
+                        alt="Preview of the business platform and automation setup" />
+                </div>
+                <div class="projectBody">
+                    <div class="projectTop">
+                        <p class="projectIndex">07</p>
+                        <p class="projectType" data-i18n="project_type_11">Business Setup</p>
+                    </div>
+                    <h2>Business Platform with Domain, Email & Automation</h2>
+                    <p class="projectExcerpt" data-i18n="project_excerpt_11">Website, hosting, domain, email, and automation flow for client interaction.</p>
+                    <ul class="projectTags">
+                        <li>Hosting</li>
+                        <li>n8n</li>
+                        <li>Automation</li>
+                    </ul>
+                    <div class="projectActions">
+                        <button class="projectButton" type="button" data-project-open="business-platform" data-i18n="project_open_case">Open case</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="projectCard" data-reveal data-project-open="membership-platform">
+                <div class="projectMedia">
+                    <img src="../img/upwork-15-membership-platform.jpeg"
+                        alt="Preview of the GoHighLevel membership platform" />
+                </div>
+                <div class="projectBody">
+                    <div class="projectTop">
+                        <p class="projectIndex">08</p>
+                        <p class="projectType" data-i18n="project_type_15">Membership Ops</p>
+                    </div>
+                    <h2>GoHighLevel Membership Platform & Student Operations</h2>
+                    <p class="projectExcerpt" data-i18n="project_excerpt_15">GoHighLevel membership platform with certifications, communities, 73+ monthly subscriptions, and roughly $50K monthly volume.</p>
+                    <ul class="projectTags">
+                        <li>GHL</li>
+                        <li>Membership</li>
+                        <li>Automation</li>
+                    </ul>
+                    <div class="projectActions">
+                        <button class="projectButton" type="button" data-project-open="membership-platform" data-i18n="project_open_case">Open case</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="projectCard" data-reveal data-project-open="ecohotel-platform">
+                <div class="projectMedia">
+                    <img src="../img/upwork-08-ecohotel.png" alt="Preview of the EcoHotel website platform" />
+                </div>
+                <div class="projectBody">
+                    <div class="projectTop">
+                        <p class="projectIndex">09</p>
+                        <p class="projectType" data-i18n="project_type_8">Website + Ops</p>
+                    </div>
+                    <h2>EcoHotel Villa Romana Platform</h2>
+                    <p class="projectExcerpt" data-i18n="project_excerpt_8">Booking-oriented website prepared for future reservation and CRM automations.</p>
+                    <ul class="projectTags">
+                        <li>Web</li>
+                        <li>Performance</li>
+                        <li>Automation</li>
+                    </ul>
+                    <div class="projectActions">
+                        <button class="projectButton" type="button" data-project-open="ecohotel-platform" data-i18n="project_open_case">Open case</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="projectCard" data-reveal data-project-open="interactive-portfolio">
+                <div class="projectMedia">
+                    <img src="../img/upwork-09-interactive-portfolio.png" alt="Preview of the interactive portfolio project" />
+                </div>
+                <div class="projectBody">
+                    <div class="projectTop">
+                        <p class="projectIndex">10</p>
+                        <p class="projectType" data-i18n="project_type_9">Website</p>
+                    </div>
+                    <h2>Interactive Portfolio Website</h2>
+                    <p class="projectExcerpt" data-i18n="project_excerpt_9">A branding site with responsive UI and operational automation for forms and notifications.</p>
+                    <ul class="projectTags">
+                        <li>UX</li>
+                        <li>Responsive</li>
+                        <li>Automation</li>
+                    </ul>
+                    <div class="projectActions">
+                        <button class="projectButton" type="button" data-project-open="interactive-portfolio" data-i18n="project_open_case">Open case</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="projectCard" data-reveal data-project-open="ai-content-ops">
+                <div class="projectMedia">
+                    <img src="../img/upwork-07-ai-content-ops.png"
+                        alt="Preview of the AI content creation system" />
+                </div>
+                <div class="projectBody">
+                    <div class="projectTop">
+                        <p class="projectIndex">11</p>
+                        <p class="projectType" data-i18n="project_type_7">Marketing Ops</p>
+                    </div>
+                    <h2>Automated AI Content Creation System</h2>
+                    <p class="projectExcerpt" data-i18n="project_excerpt_7">Automated asset creation for marketing teams without manual production loops.</p>
+                    <ul class="projectTags">
+                        <li>AI Bot</li>
+                        <li>Automation</li>
+                        <li>Marketing</li>
+                    </ul>
+                    <div class="projectActions">
+                        <button class="projectButton" type="button" data-project-open="ai-content-ops" data-i18n="project_open_case">Open case</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="projectCard" data-reveal data-project-open="newsletter-engine">
+                <div class="projectMedia">
+                    <img src="../img/upwork-03-newsletter-engine.png"
+                        alt="Preview of the automated newsletter engine" />
+                </div>
+                <div class="projectBody">
+                    <div class="projectTop">
+                        <p class="projectIndex">12</p>
+                        <p class="projectType" data-i18n="project_type_3">AI Content Ops</p>
+                    </div>
+                    <h2>Automated Newsletter & AI Content Engine</h2>
+                    <p class="projectExcerpt" data-i18n="project_excerpt_3">End-to-end content production with research, writing, formatting, and
+                        distribution.</p>
+                    <ul class="projectTags">
+                        <li>n8n</li>
+                        <li>OpenAI API</li>
+                        <li>Email</li>
+                    </ul>
+                    <div class="projectActions">
+                        <button class="projectButton" type="button" data-project-open="newsletter-engine" data-i18n="project_open_case">Open case</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="projectCard" data-reveal data-project-open="analytics-system">
+                <div class="projectMedia">
+                    <img src="../img/upwork-10-analytics-system.png" alt="Preview of the analytics system" />
+                </div>
+                <div class="projectBody">
+                    <div class="projectTop">
+                        <p class="projectIndex">13</p>
+                        <p class="projectType" data-i18n="project_type_10">Analytics</p>
+                    </div>
+                    <h2>Data Analytics System</h2>
+                    <p class="projectExcerpt" data-i18n="project_excerpt_10">Clean data, KPI tracking, and operational visibility through a live dashboard.</p>
+                    <ul class="projectTags">
+                        <li>Dashboard</li>
+                        <li>Automation</li>
+                        <li>PostgreSQL</li>
+                    </ul>
+                    <div class="projectActions">
+                        <button class="projectButton" type="button" data-project-open="analytics-system" data-i18n="project_open_case">Open case</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="projectCard" data-reveal data-project-open="wifi-capture-automation">
+                <div class="projectMedia">
+                    <img src="../img/upwork-12-wifi-capture.png"
+                        alt="Preview of the WiFi portal capture automation" />
+                </div>
+                <div class="projectBody">
+                    <div class="projectTop">
+                        <p class="projectIndex">14</p>
+                        <p class="projectType" data-i18n="project_type_14">Capture Automation</p>
+                    </div>
+                    <h2>WiFi Portal Capture & Contact Automation</h2>
+                    <p class="projectExcerpt" data-i18n="project_excerpt_14">WiFi portal capture with 60k+ contacts, 30+ n8n steps, UniFi Controller, and automation-ready data flow.</p>
+                    <ul class="projectTags">
+                        <li>n8n</li>
+                        <li>UniFi</li>
+                        <li>Capture</li>
+                    </ul>
+                    <div class="projectActions">
+                        <button class="projectButton" type="button" data-project-open="wifi-capture-automation" data-i18n="project_open_case">Open case</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="projectCard" data-reveal data-project-open="utility-data-entry-automation">
+                <div class="projectMedia">
+                    <img src="../img/upwork-16-data-entry-1.jpeg"
+                        alt="Preview of the utility bill data entry automation" />
+                </div>
+                <div class="projectBody">
+                    <div class="projectTop">
+                        <p class="projectIndex">15</p>
+                        <p class="projectType" data-i18n="project_type_16">Backoffice Ops</p>
+                    </div>
+                    <h2>Utility Bill Data Entry Automation</h2>
+                    <p class="projectExcerpt" data-i18n="project_excerpt_16">Power Automate, Excel, and Microsoft integrations cutting around 50% of manual utility-bill data entry work.</p>
+                    <ul class="projectTags">
+                        <li>Power Automate</li>
+                        <li>Excel</li>
+                        <li>Microsoft API</li>
+                    </ul>
+                    <div class="projectActions">
+                        <button class="projectButton" type="button" data-project-open="utility-data-entry-automation" data-i18n="project_open_case">Open case</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="projectCard" data-reveal data-project-open="vps-deployment">
+                <div class="projectMedia">
+                    <img src="../img/upwork-04-vps-deployment.png" alt="Preview of the VPS deployment project" />
+                </div>
+                <div class="projectBody">
+                    <div class="projectTop">
+                        <p class="projectIndex">16</p>
+                        <p class="projectType" data-i18n="project_type_4">Infrastructure</p>
+                    </div>
+                    <h2>Secure VPS Infrastructure & Deployment</h2>
+                    <p class="projectExcerpt" data-i18n="project_excerpt_4">Migration-ready production base with cleaner security and deployment
+                        control.</p>
+                    <ul class="projectTags">
+                        <li>Linux</li>
+                        <li>NGINX</li>
+                        <li>Deployment</li>
+                    </ul>
+                    <div class="projectActions">
+                        <button class="projectButton" type="button" data-project-open="vps-deployment" data-i18n="project_open_case">Open case</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="projectCard" data-reveal data-project-open="kubernetes-n8n-cluster">
+                <div class="projectMedia">
+                    <img src="../img/upwork-13-kubernetes-cluster.png"
+                        alt="Preview of the Kubernetes multi-platform n8n setup" />
+                </div>
+                <div class="projectBody">
+                    <div class="projectTop">
+                        <p class="projectIndex">17</p>
+                        <p class="projectType" data-i18n="project_type_13">Platform Ops</p>
+                    </div>
+                    <h2>Kubernetes Multi-Platform Setup for n8n</h2>
+                    <p class="projectExcerpt" data-i18n="project_excerpt_13">Azure, Kubernetes, NGINX, 8 n8n queue-mode instances, and NoCoDB for scalable automation infrastructure.</p>
+                    <ul class="projectTags">
+                        <li>Kubernetes</li>
+                        <li>Azure</li>
+                        <li>n8n</li>
+                    </ul>
+                    <div class="projectActions">
+                        <button class="projectButton" type="button" data-project-open="kubernetes-n8n-cluster" data-i18n="project_open_case">Open case</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="projectCard" data-reveal data-project-open="mcp-enterprise-control">
+                <div class="projectMedia">
+                    <img src="../img/upwork-18-mcp-server.png"
+                        alt="Preview of the enterprise MCP server system" />
+                </div>
+                <div class="projectBody">
+                    <div class="projectTop">
+                        <p class="projectIndex">18</p>
+                        <p class="projectType" data-i18n="project_type_18">Enterprise MCP</p>
+                    </div>
+                    <h2>Enterprise MCP Server for Ticketing &amp; Tenant Control</h2>
+                    <p class="projectExcerpt" data-i18n="project_excerpt_18">MCP server connected to ticketing, GPT interfaces, CIPP, and Microsoft tenant workflows for centralized enterprise control.</p>
+                    <ul class="projectTags">
+                        <li>MCP</li>
+                        <li>CIPP</li>
+                        <li>Microsoft 365</li>
+                    </ul>
+                    <div class="projectActions">
+                        <button class="projectButton" type="button" data-project-open="mcp-enterprise-control" data-i18n="project_open_case">Open case</button>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+        <div class="projectModal" id="projectModal" aria-hidden="true">
+            <div class="projectModalBackdrop" data-project-close></div>
+            <div class="projectModalPanel" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle">
+                <button class="modalClose" type="button" aria-label="Close project detail" data-project-close>×</button>
+                <div class="projectModalHeader">
+                    <div class="projectModalHeaderText">
+                        <h2 id="projectModalTitle"></h2>
+                    </div>
+                </div>
+                <div class="projectModalBody">
+                    <aside class="projectModalContent">
+                        <div class="projectModalRoleRow">
+                            <span class="projectModalSectionTitle">My role.</span>
+                            <p id="projectModalRole"></p>
+                        </div>
+                        <div class="projectModalCopy">
+                            <span class="projectModalSectionTitle">Project description.</span>
+                            <p class="projectModalDescription" id="projectModalDescription"></p>
+                        </div>
+                        <div class="projectModalSkillsBlock">
+                            <span class="projectModalSectionTitle">Skills and deliverables</span>
+                            <div class="projectModalSkills" id="projectModalSkills"></div>
+                        </div>
+                    </aside>
+                    <div class="projectModalMedia">
+                        <div class="projectModalMediaStage">
+                            <button class="projectModalNav projectModalNavPrev" type="button" id="projectModalPrev"
+                                aria-label="Previous image">‹</button>
+                            <img id="projectModalImage" src="" alt="Project image" />
+                            <button class="projectModalNav projectModalNavNext" type="button" id="projectModalNext"
+                                aria-label="Next image">›</button>
+                        </div>
+                        <div class="projectModalThumbs" id="projectModalThumbs"></div>
+                        <p class="projectModalMobileHint" id="projectModalMobileHint" data-i18n="project_mobile_hint" hidden>Tap a thumbnail or use the arrows.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
     <footer>
         <ul class="pie">
             <li>
-                <a href="#"><img src="../img/social.png" alt="Imagen de linkedin" /></a>
+                <a href="https://www.linkedin.com/in/camargo-jose" target="_blank" rel="noopener noreferrer"><img
+                        src="../img/social.png" alt="Imagen de linkedin" /></a>
             </li>
             <li>
-                <a href="#"><img src="../img/whatsapp.png" alt="Imagen de Whatsapp" /></a>
+                <a href="https://wa.me/573142023012" target="_blank" rel="noopener noreferrer"><img
+                        src="../img/whatsapp.png" alt="Imagen de Whatsapp" /></a>
             </li>
             <li>
-                <a href="#"><img src="../img/github.png" alt="Imagen de GitHub" /></a>
+                <a href="https://github.com/joseCamargo12" target="_blank" rel="noopener noreferrer"><img
+                        src="../img/github.png" alt="Imagen de GitHub" /></a>
             </li>
         </ul>
     </footer>
-    <script src="/js/script.js"></script>
+
+    <script src="../js/script.js"></script>
 </body>
+
 </html>

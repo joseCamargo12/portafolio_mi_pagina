@@ -5,47 +5,218 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon" />
-    <meta name="description" content=" Hey, I'm Jose Camargo – a tech enthusiast skilled in problem-solving. Explore
-        how my experience fits your software needs. Learn more about me now!">
+    <meta name="description"
+        content="Jose Camargo builds automation systems, AI workflows, CRM migrations, voice agents, and integrations for real business operations." />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <!-- Style sheet -->
     <link rel="stylesheet" href="../css/style.css">
-    <title>JC DEV -- About</title>
+    <title>Jose Camargo | About</title>
 </head>
 
-<body>
+<body class="subPage">
     <header>
-        <a href="../Index.html"> <img src="../img/logo.png" alt="Logo de JC DEV" class="logo" /> </a>
-        <button class="abrirMenu" id="abrir"><i class="bi bi-list"></i></button>
+        <a href="../index.html"><img src="../img/logo.png" alt="Logo de JC DEV" class="logo" /></a>
+        <button class="abrirMenu" id="abrir" aria-label="Open menu"><i class="bi bi-list"></i></button>
         <nav class="nav" id="nav">
-            <button class="cerrarMenu" id="cerrar"><i class="bi bi-x-lg"></i></button>
+            <button class="cerrarMenu" id="cerrar" aria-label="Close menu"><i class="bi bi-x-lg"></i></button>
             <ul class="navList">
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="../index.html" data-i18n="nav_home">Home</a></li>
+                <li><a href="about.html" data-i18n="nav_about">About</a></li>
+                <li><a href="projects.html" data-i18n="nav_projects">Projects</a></li>
+                <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+                <li class="navLangItem">
+                    <div class="langSwitch" role="group" aria-label="Language switch">
+                        <button class="langSwitchButton" type="button" data-lang-button="es" aria-pressed="false">ES</button>
+                        <button class="langSwitchButton" type="button" data-lang-button="en" aria-pressed="true">EN</button>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
 
-    <section>
-        <h1>About me.</h1>
-    </section>
+    <main class="contentPage pageShell editorialPage">
+        <section class="pageIntro compactIntro" data-reveal>
+            <p class="eyebrow" data-i18n="about_eyebrow">About</p>
+            <h1 data-i18n="about_title">I'm Jose. I build automation, CRM, and AI systems for real operations.</h1>
+            <p data-i18n="about_intro">
+                Full stack when needed, but usually hired to remove manual work, connect tools, and make the operation
+                cleaner.
+            </p>
+        </section>
+
+        <section class="editorialSection" data-reveal>
+            <div class="editorialStory editorialStoryWide">
+                <p data-i18n="about_story_1">
+                    I work where automation, CRM, AI, and business operations meet. I build flows in n8n, automate
+                    processes inside CRMs, connect tools through APIs, migrate systems, and create internal logic
+                    that helps teams move faster with less friction.
+                </p>
+                <p data-i18n="about_story_2">
+                    A lot of that work includes AI for business use: voice agents for lead qualification, website
+                    and messaging agents, WhatsApp workflows, CRM automations, and systems that keep information
+                    moving between platforms without manual repetition.
+                </p>
+            </div>
+        </section>
+
+        <section class="editorialSection" data-reveal>
+            <p class="sectionEyebrow" data-i18n="about_what_eyebrow">What I Do</p>
+            <h2 data-i18n="about_what_title">Most of the work starts with automation, then expands into integration, product, or infrastructure.</h2>
+            <ul class="editorialList">
+                <li data-i18n="about_list_1">Automation systems for operations using `n8n`, APIs, webhooks, and connected business logic.</li>
+                <li data-i18n="about_list_2">CRM migrations, CRM integrations, and automations built directly inside the CRM environment.</li>
+                <li data-i18n="about_list_3">AI voice agents for lead qualification and AI agents for websites, support, and messaging.</li>
+                <li data-i18n="about_list_4">GoHighLevel workflows, contact logic, pipeline automations, and follow-up systems.</li>
+                <li data-i18n="about_list_5">WhatsApp flows, internal tools, deployment, VPS setup, and production-ready infrastructure.</li>
+            </ul>
+        </section>
+
+        <section class="editorialSection faqSection" data-reveal>
+            <p class="sectionEyebrow" data-i18n="faq_eyebrow">FAQ</p>
+            <h2 data-i18n="faq_title">What usually needs to be clarified before getting started.</h2>
+
+            <div class="faqStack" data-faq-group>
+                <article class="faqItem is-open" data-faq-item>
+                    <button class="faqTrigger" type="button" aria-expanded="true">
+                        <span data-i18n="faq_q1">Do you work with a specific niche?</span>
+                        <span class="faqIcon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faqAnswer">
+                        <div class="faqAnswerInner">
+                            <p data-i18n="faq_a1">No. The focus is on understanding the business problem and designing the right solution for that specific context.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="faqItem" data-faq-item>
+                    <button class="faqTrigger" type="button" aria-expanded="false">
+                        <span data-i18n="faq_q2">Can this connect to my CRM or current tools?</span>
+                        <span class="faqIcon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faqAnswer">
+                        <div class="faqAnswerInner">
+                            <p data-i18n="faq_a2">Yes. Most projects start by integrating what already exists so work is not duplicated and your current data can be used better.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="faqItem" data-faq-item>
+                    <button class="faqTrigger" type="button" aria-expanded="false">
+                        <span data-i18n="faq_q3">What is the real value of automation?</span>
+                        <span class="faqIcon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faqAnswer">
+                        <div class="faqAnswerInner">
+                            <p data-i18n="faq_a3">It helps you respond faster, reduce manual work, organize information better, and free up your team for work that actually matters.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="faqItem" data-faq-item>
+                    <button class="faqTrigger" type="button" aria-expanded="false">
+                        <span data-i18n="faq_q4">Is this the same as using ChatGPT?</span>
+                        <span class="faqIcon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faqAnswer">
+                        <div class="faqAnswerInner">
+                            <p data-i18n="faq_a4">Not exactly. ChatGPT can be one piece of a solution, but a useful system usually also needs logic, integrations, memory, business context, and connection to your tools.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="faqItem" data-faq-item>
+                    <button class="faqTrigger" type="button" aria-expanded="false">
+                        <span data-i18n="faq_q5">Do I need to have everything defined before reaching out?</span>
+                        <span class="faqIcon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faqAnswer">
+                        <div class="faqAnswerInner">
+                            <p data-i18n="faq_a5">No. Many conversations start from a general need, and from there the right first step becomes clearer without overcomplicating things.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="faqItem" data-faq-item>
+                    <button class="faqTrigger" type="button" aria-expanded="false">
+                        <span data-i18n="faq_q6">What if I still do not know exactly what I need?</span>
+                        <span class="faqIcon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faqAnswer">
+                        <div class="faqAnswerInner">
+                            <p data-i18n="faq_a6">That is normal. The first conversation often exists to figure out whether the right move is an automation, an agent, or a more complete system.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="faqItem" data-faq-item>
+                    <button class="faqTrigger" type="button" aria-expanded="false">
+                        <span data-i18n="faq_q7">What should I automate first?</span>
+                        <span class="faqIcon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faqAnswer">
+                        <div class="faqAnswerInner">
+                            <p data-i18n="faq_a7">Usually the thing that takes the most time, creates the most errors, or has the biggest impact on sales and follow-up. That is often in lead handling, repetitive tasks, CRM updates, or internal responses.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="faqItem" data-faq-item>
+                    <button class="faqTrigger" type="button" aria-expanded="false">
+                        <span data-i18n="faq_q8">Are voice agents actually usable, or do they still sound robotic?</span>
+                        <span class="faqIcon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faqAnswer">
+                        <div class="faqAnswerInner">
+                            <p data-i18n="faq_a8">They are already usable, and in many cases they work very well. The difference comes from how they are designed, what context they have, and where they are used in the process.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="faqItem" data-faq-item>
+                    <button class="faqTrigger" type="button" aria-expanded="false">
+                        <span data-i18n="faq_q9">How long does something like this take to implement?</span>
+                        <span class="faqIcon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faqAnswer">
+                        <div class="faqAnswerInner">
+                            <p data-i18n="faq_a9">It depends on scope. Some automations can move quickly, while a more complete system takes multiple stages. The normal approach is to start with a useful first version and iterate from there.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="faqItem" data-faq-item>
+                    <button class="faqTrigger" type="button" aria-expanded="false">
+                        <span data-i18n="faq_q10">How expensive can something like this be?</span>
+                        <span class="faqIcon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faqAnswer">
+                        <div class="faqAnswerInner">
+                            <p data-i18n="faq_a10">It depends on the real scope of the project. Not everything requires a big budget. Many times it makes sense to start with something focused, useful, and well designed.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+    </main>
 
     <footer>
         <ul class="pie">
             <li>
-                <a href="#"><img src="../img/social.png" alt="Imagen de linkedin" /></a>
+                <a href="https://www.linkedin.com/in/camargo-jose" target="_blank" rel="noopener noreferrer"><img
+                        src="../img/social.png" alt="Imagen de linkedin" /></a>
             </li>
             <li>
-                <a href="#"><img src="../img/whatsapp.png" alt="Imagen de Whatsapp" /></a>
+                <a href="https://wa.me/573142023012" target="_blank" rel="noopener noreferrer"><img
+                        src="../img/whatsapp.png" alt="Imagen de Whatsapp" /></a>
             </li>
             <li>
-                <a href="#"><img src="../img/github.png" alt="Imagen de GitHub" /></a>
+                <a href="https://github.com/joseCamargo12" target="_blank" rel="noopener noreferrer"><img
+                        src="../img/github.png" alt="Imagen de GitHub" /></a>
             </li>
         </ul>
     </footer>
 
-    <script src="/js/script.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 
 </html>
