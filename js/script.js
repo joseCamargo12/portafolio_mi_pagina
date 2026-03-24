@@ -26,8 +26,8 @@ const homeTitleText = document.querySelector("[data-home-title-text]");
 const langButtons = document.querySelectorAll("[data-lang-button]");
 const i18nNodes = document.querySelectorAll("[data-i18n]");
 const assetBase = window.location.pathname.includes("/pages/") ? "../img" : "img";
-const defaultRecaptchaSiteKey = "6LdKeAYsAAAAAE6rFGQALotyKprbExpeWJ_Z4jJX";
-const aiChatWebhookUrl = "https://engine.marpicorp.com/webhook/d3da83fd-1c75-47f6-97e1-e4acab555516";
+const defaultRecaptchaSiteKey = "6LchXJYsAAAAAO4X2A_4MExA_DE0tekLV_lt3rJr";
+const aiChatWebhookUrl = "https://engine.marpicorp.com/webhook/0ddb45ae-d8e2-48a0-90ba-e3cbe6688c37";
 let currentLanguage = "en";
 
 const homepageTranslations = {
