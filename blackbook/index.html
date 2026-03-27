@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blackbook · March 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f9f8f6;
+    --white: #ffffff;
+    --ink: #141312;
+    --warm: #6b5b47;
+    --muted: #9c9489;
+    --line: #e4dfd6;
+    --accent: #b8906a;
+    --soft: #f2ede6;
+    --dark: #141312;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Jost", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 52px;
+    background: rgba(249, 248, 246, 0.95);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 56px;
+    z-index: 200;
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards 0.2s;
+  }
+
+  .brand {
+    font-family: "Cormorant", serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .nav-r {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  @media (max-width: 600px) {
+    nav {
+      padding: 0 24px;
+    }
+
+    .nav-r {
+      display: none;
+    }
+  }
+
+  .hero {
+    padding: 144px 56px 80px;
+    max-width: 960px;
+    margin: 0 auto;
+    opacity: 0;
+    animation: up 0.8s ease forwards 0.4s;
+  }
+
+  .hero-tag {
+    font-size: 10px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 28px;
+    display: block;
+  }
+
+  .hero h1 {
+    font-family: "Cormorant", serif;
+    font-size: clamp(40px, 6vw, 72px);
+    font-weight: 300;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    margin-bottom: 28px;
+    max-width: 640px;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .hero-sub {
+    font-size: 14px;
+    color: var(--muted);
+    max-width: 460px;
+    line-height: 1.85;
+    border-left: 2px solid var(--accent);
+    padding-left: 18px;
+  }
+
+  @media (max-width: 600px) {
+    .hero {
+      padding: 120px 24px 64px;
+    }
+  }
+
+  .sec {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 72px 56px;
+    border-top: 1px solid var(--line);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .sec.on {
+    opacity: 1;
+    transform: none;
+  }
+
+  @media (max-width: 600px) {
+    .sec {
+      padding: 56px 24px;
+    }
+  }
+
+  .ey {
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .ey::after {
+    content: "";
+    height: 1px;
+    width: 36px;
+    background: var(--line);
+  }
+
+  .sec h2 {
+    font-family: "Cormorant", serif;
+    font-size: clamp(26px, 4vw, 44px);
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 36px;
+  }
+
+  .sec h2 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+
+  @media (max-width: 600px) {
+    .stats {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .stat {
+    background: var(--white);
+    padding: 28px 24px;
+  }
+
+  .stat-v {
+    font-family: "Cormorant", serif;
+    font-size: 48px;
+    font-weight: 300;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+
+  .stat-l {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  .g {
+    display: grid;
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+
+  .g2 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .g3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media (max-width: 680px) {
+    .g2,
+    .g3 {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .cell {
+    background: var(--white);
+    padding: 26px 24px;
+    transition: background 0.2s;
+  }
+
+  .cell:hover {
+    background: var(--soft);
+  }
+
+  .ctag {
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .cell h3 {
+    font-family: "Cormorant", serif;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+
+  .cell p {
+    font-size: 13px;
+    color: var(--warm);
+    line-height: 1.7;
+  }
+
+  .table {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+
+  @media (max-width: 600px) {
+    .table {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .t-h {
+    background: var(--dark);
+    padding: 12px 22px;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .t-h.bad {
+    color: #c9877a;
+  }
+
+  .t-r {
+    background: var(--white);
+    padding: 14px 22px;
+    font-size: 13px;
+    color: var(--warm);
+    line-height: 1.55;
+    border-top: 1px solid var(--line);
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .t-r::before {
+    content: "✓";
+    color: var(--accent);
+    font-size: 11px;
+    flex-shrink: 0;
+    padding-top: 1px;
+  }
+
+  .t-r.no::before {
+    content: "✗";
+    color: #c9877a;
+  }
+
+  .pri {
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 0 20px;
+    padding: 26px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .pri:first-child {
+    border-top: 1px solid var(--line);
+  }
+
+  .pri-n {
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    padding-top: 3px;
+  }
+
+  .pri h3 {
+    font-family: "Cormorant", serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 6px;
+  }
+
+  .pri p {
+    font-size: 13px;
+    color: var(--warm);
+    line-height: 1.7;
+    max-width: 600px;
+  }
+
+  .closing {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 80px 56px 110px;
+    border-top: 1px solid var(--line);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .closing.on {
+    opacity: 1;
+    transform: none;
+  }
+
+  @media (max-width: 600px) {
+    .closing {
+      padding: 60px 24px 80px;
+    }
+  }
+
+  .closing h2 {
+    font-family: "Cormorant", serif;
+    font-size: clamp(28px, 4.5vw, 50px);
+    font-weight: 300;
+    line-height: 1.1;
+    max-width: 520px;
+    margin-bottom: 16px;
+  }
+
+  .closing h2 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .closing p {
+    font-size: 13px;
+    color: var(--muted);
+    max-width: 440px;
+    line-height: 1.85;
+  }
+
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 20px 56px;
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  footer span {
+    font-size: 10px;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  @media (max-width: 600px) {
+    footer {
+      padding: 20px 24px;
+      flex-direction: column;
+      gap: 6px;
+    }
+  }
+
+  @keyframes up {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <div class="brand">Blackbook Properties</div>
+  <div class="nav-r">March 2026</div>
+</nav>
+
+<div class="hero">
+  <span class="hero-tag">Blackbook Properties · Research Overview</span>
+  <h1>What I learned.<br>What I saw.<br><em>How I'd approach it.</em></h1>
+  <p class="hero-sub">Before this conversation I went through the website, the YouTube channel, and Miami's luxury market. This is what stood out.</p>
+</div>
+
+<section class="sec">
+  <div class="ey">01 · What is a Brokerage</div>
+  <h2>The bridge between<br><em>buyer, seller, and deal.</em></h2>
+  <div class="g g3">
+    <div class="cell">
+      <span class="ctag">The model</span>
+      <h3>Commission at closing</h3>
+      <p>Between 3% and 6% of the property value. On a $3M condo, one deal is significant. Everything the business does exists to bring more deals to that moment, faster.</p>
+    </div>
+    <div class="cell">
+      <span class="ctag">Blackbook's edge</span>
+      <h3>Floor plans and building depth</h3>
+      <p>Most brokerages show listings. Blackbook shows context: floor plans, building histories, pre-construction timelines. The client understands the property before they ever visit.</p>
+    </div>
+    <div class="cell">
+      <span class="ctag">Three clients</span>
+      <h3>Not the same conversation</h3>
+      <p>Buyer, seller, investor. Same brokerage but three completely different journeys from the very first interaction.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="ey">02 · Miami Luxury Market</div>
+  <h2>Still active.<br><em>More selective.</em></h2>
+  <div class="stats">
+    <div class="stat">
+      <span class="stat-v">43%</span>
+      <div class="stat-l">Cash buyers in Miami-Dade. Deals move on trust, not financing.</div>
+    </div>
+    <div class="stat">
+      <span class="stat-v">+20%</span>
+      <div class="stat-l">Transactions above $1M year over year. The high end keeps growing.</div>
+    </div>
+    <div class="stat">
+      <span class="stat-v">88d</span>
+      <div class="stat-l">Average days to sell a luxury condo. Positioning matters more than ever.</div>
+    </div>
+  </div>
+  <div class="g g2" style="border-top:none;margin-top:1px">
+    <div class="cell">
+      <span class="ctag">Who is buying</span>
+      <h3>Latin America, New York, tech wealth</h3>
+      <p>Cash-heavy and used to the best. They buy status, not just square footage. They will not tolerate slow responses or generic experiences.</p>
+    </div>
+    <div class="cell">
+      <span class="ctag">What this means</span>
+      <h3>The advisor matters as much as the listing</h3>
+      <p>More inventory means clients have real options. The brokerage that stays present and informed throughout the entire decision wins.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="ey">03 · AI + Luxury</div>
+  <h2>Not everything needs AI.<br><em>But the right things do.</em></h2>
+  <div class="g g2">
+    <div class="cell">
+      <span class="ctag">Where it works</span>
+      <h3>Speed without losing the feel</h3>
+      <p>A lead at 11pm deserves an immediate, on-brand response. Not a generic auto-reply. AI handles the first moment so the agent picks it up in the morning with full context.</p>
+    </div>
+    <div class="cell">
+      <span class="ctag">Where it works</span>
+      <h3>One conversation per client type</h3>
+      <p>A buyer and an investor are not the same person. AI routes and personalizes so each client gets a conversation that feels built specifically for them.</p>
+    </div>
+    <div class="cell">
+      <span class="ctag">Where it works</span>
+      <h3>Agents focus on closing</h3>
+      <p>Listing descriptions, follow-ups, activity logging. AI handles the repeatable work. The agent handles the relationship and the negotiation.</p>
+    </div>
+    <div class="cell">
+      <span class="ctag">Where to be careful</span>
+      <h3>Luxury clients feel generic immediately</h3>
+      <p>A templated response to a $5M buyer damages trust in seconds. Every AI touchpoint has to feel considered, or it becomes a liability.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="ey">04 · Marketing</div>
+  <h2>Quality over quantity.<br><em>Always.</em></h2>
+  <div class="table">
+    <div class="t-h">What works</div>
+    <div class="t-h bad">What does not</div>
+    <div class="t-r">Expert video content: market reports, building tours, neighborhood context.</div>
+    <div class="t-r no">Generic listing posts. Every brokerage does this.</div>
+    <div class="t-r">CTAs that create curiosity. "Get the insider report" not "Contact us now."</div>
+    <div class="t-r no">Promotional language. Luxury clients buy status. Cheap messaging kills the brand.</div>
+    <div class="t-r">Content that educates. The client who understands the market trusts the brokerage that taught them.</div>
+    <div class="t-r no">Social content with no next step. Reach without a path into the CRM is just reach.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="ey">05 · How I'd Approach It</div>
+  <h2>Four priorities.<br><em>In this order.</em></h2>
+  <div style="margin-top:4px">
+    <div class="pri">
+      <div class="pri-n">01</div>
+      <div>
+        <h3>Connect content to the pipeline</h3>
+        <p>487 videos, a blog, Instagram, TikTok. None of it connected to a CRM entry. A smart, on-brand CTA at each touchpoint that captures interest and routes it into the right follow-up sequence.</p>
+      </div>
+    </div>
+    <div class="pri">
+      <div class="pri-n">02</div>
+      <div>
+        <h3>Qualify what is already in the CRM</h3>
+        <p>Use what already exists in Follow Up Boss: how a lead came in, what they asked, whether they called or messaged. Classify each one as buyer, seller, or investor. Clean data first, then build on top of it.</p>
+      </div>
+    </div>
+    <div class="pri">
+      <div class="pri-n">03</div>
+      <div>
+        <h3>Fast, on-brand response at any hour</h3>
+        <p>A lead that waits has already called another brokerage. An intelligent first response, premium and specific, connected to Follow Up Boss so no lead is ever left without an answer.</p>
+      </div>
+    </div>
+    <div class="pri">
+      <div class="pri-n">04</div>
+      <div>
+        <h3>Seller and investor journeys that match the brand</h3>
+        <p>The buyer experience is strong. The seller goes to a separate page that breaks the premium feel. The investor has no path at all. Both need the same level of depth inside the Blackbook experience.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="closing">
+  <h2>I came prepared.<br><em>Now I want to hear<br>what I got wrong.</em></h2>
+  <p>Everything here is based on public research. There is a lot I do not know yet about how things actually work internally. That is what this conversation is for.</p>
+</div>
+
+<footer>
+  <span>Blackbook Properties · March 2026</span>
+  <span>Not a proposal, a conversation starter</span>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("on");
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.06 });
+
+  document.querySelectorAll(".sec,.closing").forEach((el) => io.observe(el));
+</script>
+</body>
+</html>
